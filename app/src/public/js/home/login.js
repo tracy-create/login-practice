@@ -12,6 +12,14 @@ function login() {
     psword : psword.value,
   };
 
+  console.log(req)
+  console.log(JSON.stringify(req));
   // fetch를 이용해서 서버에 전달
-  console.log(req);
+  fetch("/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(req),
+  });
 }
