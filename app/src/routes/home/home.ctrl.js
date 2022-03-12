@@ -22,5 +22,5 @@ const process = {
 };
 
 module.exports = {
-  output, process
+  output, process,
 };
