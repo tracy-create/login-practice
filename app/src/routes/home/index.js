@@ -3,13 +3,10 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.render("home/index");
-}); // 경로 지정
-// render - 해당 경로로 왔을 때 넘겨줄 html페이지를 지정해 줌
+const ctrl = require("./home.ctrl");
 
-router.get("/login", (req, res) => {
-  res.render("home/login");
-});
+router.get("/", ctrl.output.home);
+router.get("/login", ctrl.output.login);
+router.post("/login", ctrl.process.login);
 
 module.exports = router;

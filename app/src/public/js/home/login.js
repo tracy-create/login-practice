@@ -13,7 +13,7 @@ function login() {
   };
 
   // fetch를 이용해서 서버에 전달
-  fetch("/login/", {
+  fetch("/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
